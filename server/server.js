@@ -11,13 +11,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 //de esta manera importamos y usamos esas rutas del usuario
-app.use(require('./routes/usuario'));
- 
+//configuracion global de rutas
+app.use(require('./routes/index'));
+
 mongoose.connect('mongodb://localhost:27017/cafe', {useNewUrlParser: true}, (err, res) => {
     if(err){
         throw err;
     }
-    console.log("Base de datos ONLINE!!   mongodb+srv://pierrejara:<password>@cluster0-s5xtq.mongodb.net/test");
+    console.log("Base de datos ONLINE!!");
 });
  
 app.listen(process.env.PORT, () => {
