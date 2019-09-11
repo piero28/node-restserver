@@ -20,7 +20,6 @@ const app = express();
                     err
                 });
             }
-
             Usuario.count({estado:true}, (err, conteo) => {
                 res.json({
                     success: true,
