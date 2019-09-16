@@ -3,7 +3,7 @@ process.env.PORT = process.env.PORT || 3000;
 //Definir Entorno
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 //Vencimiento Token
-process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
+process.env.CADUCIDAD_TOKEN = '48h';
 //SEED o FIRMA Token - authentication
 // ** Crear variable de entorno en HEROKU con - heroku config para listarlas
 // ** Crear heroku config:set SEED="secret-prod" 
